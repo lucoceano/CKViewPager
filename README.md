@@ -1,11 +1,13 @@
-ICViewPager
+CKViewPager
+===========
+CKViewPagre is a copy of [ICViewPager](https://github.com/iltercengiz/ICViewPager) with few bug fix and improviments.
 ===========
 
 You can create sliding tabs with ViewPager.
 
 Slide through the contents or select from tabs or slide through tabs and select!
 
-<img src="https://raw.githubusercontent.com/iltercengiz/ICViewPager/master/Resources/Screenshot.jpg" alt="ICViewPager" title="ICViewPager">
+<img src="https://raw.githubusercontent.com/lucoceano/CKViewPager/master/Resources/Screenshot.jpg" alt="CKViewPager" title="CKViewPager">
 
 ## Installation
 
@@ -13,7 +15,7 @@ Just copy ViewPagerController.m and ViewPagerController.h files to your project.
 
 Or you can use CocoaPods (as this is the recommended way).
 
-`pod 'ICViewPager'`
+`pod 'CKViewPager'`
 
 ## Usage
 
@@ -148,4 +150,4 @@ Supports both iPhone and iPad.
 Note (to everyone who is interested in `ViewPager`): I cannot have much time to improve `ViewPager` for a long time, but I have some cool plans for it. So if you encounter any problems, bugs or etc. please forgive me, and send some pull requests. Thank you for your interest and support.
 
 ## Licence
-ICViewPager is MIT licensed. See the LICENCE file for more info.
+CKViewPager is MIT licensed. See the LICENCE file for more info.
