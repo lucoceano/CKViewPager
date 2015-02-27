@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
           CKViewPager is MIT licensed. See the LICENSE file for more info.
                    DESC
 
-  s.homepage     = "https://github.com/monsieurje/CKViewPager"
+  s.homepage     = "https://github.com/lucoceano/CKViewPager"
   s.screenshots  = "https://raw.githubusercontent.com/lucoceano/CKViewPager/master/Resources/Screenshot.jpg"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Lucas Oceano" => "lucoceano@gmail.com" }
