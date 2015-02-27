@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Lucas Oceano" => "lucoceano@gmail.com" }
   s.platform     = :ios, '6.0'
-  s.source       = { :git => "https://github.com/lucoceano/CKViewPager.git", :tag => "1.5.1" }
+  s.source       = { :git => "https://github.com/lucoceano/CKViewPager.git", :tag => s.version.to_s }
   s.source_files = 'CKViewPager/CKViewPager/*.{h,m}'
   s.requires_arc = true
 
