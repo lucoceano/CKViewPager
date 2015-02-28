@@ -22,7 +22,7 @@ Subclass ViewPagerController (as it's a `UIViewController` subclass) and impleme
 
 In the subclass assign self as dataSource and delegate,
 
-```
+```Objective-C
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -35,7 +35,7 @@ In the subclass assign self as dataSource and delegate,
 ### Methods
 
 Then implement dataSource and delegate methods.
-```
+```Objective-C
 #pragma mark - ViewPagerDataSource
 - (NSUInteger)numberOfTabsForViewPager:(ViewPagerController *)viewPager {
     return 10;
@@ -43,7 +43,7 @@ Then implement dataSource and delegate methods.
 ```
 Returns the number of tabs that will be present in ViewPager.
 
-```
+```Objective-C
 #pragma mark - ViewPagerDataSource
 - (UIView *)viewPager:(ViewPagerController *)viewPager viewForTabAtIndex:(NSUInteger)index {
 
@@ -56,7 +56,7 @@ Returns the number of tabs that will be present in ViewPager.
 ```
 Returns the view that will be shown as tab. Create a `UIView` object (or any `UIView` subclass object) and give it to ViewPager and it will use it as tab view.
 
-```
+```Objective-C
 #pragma mark - ViewPagerDataSource
 - (UIViewController *)viewPager:(ViewPagerController *)viewPager contentViewControllerForTabAtIndex:(NSUInteger)index {
     
@@ -73,7 +73,7 @@ The `- viewPager:contentViewControllerForTabAtIndex:` and `- viewPager:contentVi
 
 All delegate methods are optional.
 
-```
+```Objective-C
 #pragma mark - ViewPagerDelegate
 - (void)viewPager:(ViewPagerController *)viewPager didChangeTabToIndex:(NSUInteger)index {
     
@@ -82,7 +82,7 @@ All delegate methods are optional.
 ```
 ViewPager will alert your delegate object via `- viewPager:didChangeTabToIndex:` method, so that you can do something useful.
 
-```
+```Objective-C
 #pragma mark - ViewPagerDelegate
 - (CGFloat)viewPager:(ViewPagerController *)viewPager valueForOption:(ViewPagerOption)option withDefault:(CGFloat)value {
     
@@ -100,7 +100,7 @@ ViewPager will alert your delegate object via `- viewPager:didChangeTabToIndex:`
 ```
 You can change ViewPager's options via `viewPager:valueForOption:withDefault:` delegate method. Just return the desired value for the given option. You don't have to return a value for every option. Only return values for the interested options and ViewPager will use the default values for the rest. Available options are defined in the `ViewPagerController.h` file and described below.
 
-```
+```Objective-C
 #pragma mark - ViewPagerDelegate
 - (UIColor *)viewPager:(ViewPagerController *)viewPager colorForComponent:(ViewPagerComponent)component withDefault:(UIColor *)color {
     
