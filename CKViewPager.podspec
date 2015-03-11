@@ -1,12 +1,11 @@
 Pod::Spec.new do |s|
 
   s.name         = "CKViewPager"
-  s.version      = "1.0"
+  s.version      = “2.0”
   s.summary      = "You can create sliding tabs with ViewPager."
 
   s.description  = <<-DESC
 
-  		  CKViewPagre is a copy of [ICViewPager](https://github.com/iltercengiz/ICViewPager) with few bug fix and improviments.
           Slide through the contents or select from tabs or slide through tabs and select!
 
           ## Installation
@@ -23,6 +22,7 @@ Pod::Spec.new do |s|
 
           ## Contact
           [Lucas Oceano](mailto:lucoceano@gmail.com)
+	  CKViewPagre is a copy of [ICViewPager](https://github.com/iltercengiz/ICViewPager) with improvements and few bug fix.
 
           ## Licence
           CKViewPager is MIT licensed. See the LICENSE file for more info.

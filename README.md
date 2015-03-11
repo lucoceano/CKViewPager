@@ -1,6 +1,5 @@
 CKViewPager
-===========
-CKViewPagre is a copy of [ICViewPager](https://github.com/iltercengiz/ICViewPager) with few bug fix and improviments.
+============
 
 You can create sliding tabs with ViewPager.
 
