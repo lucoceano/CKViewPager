@@ -3,7 +3,7 @@ CKViewPager
 
 Easily create beautiful sliding tabs. 
 
-<img src="https://raw.githubusercontent.com/lucoceano/CKViewPager/master/Resources/screen1.png" alt="CKViewPager" title="CKViewPager">
+<img src="https://raw.githubusercontent.com/lucoceano/CKViewPager/master/Resources/screen1.png"  alt="CKViewPager" title="CKViewPager">
 ![Demo](https://raw.githubusercontent.com/lucoceano/CKViewPager/master/Resources/CKViewPager.gif)
 
 ## Installation
@@ -106,7 +106,7 @@ Supports both **iPhone and iPad**.
 
 ## Contact
 
-[Lucas Martins](mailto:lucoceano@ckl.io) [ckl.io](http://www.ckl.io)
+[Lucas Martins](mailto:lucoceano@ckl.io) - [ckl.io](http://www.ckl.io)
 
 This lib is based on [ICViewPager](https://github.com/iltercengiz/ICViewPager)
 
