@@ -3,6 +3,8 @@ CKViewPager
 
 Easily create beautiful sliding tabs. 
 
+CKViewPager is also available in [Swift](https://github.com/lucoceano/Pager)
+
 <img src="https://raw.githubusercontent.com/lucoceano/CKViewPager/master/Resources/screen1.png"  alt="CKViewPager" title="CKViewPager">
 ![Demo](https://raw.githubusercontent.com/lucoceano/CKViewPager/master/Resources/CKViewPager.gif)
 
