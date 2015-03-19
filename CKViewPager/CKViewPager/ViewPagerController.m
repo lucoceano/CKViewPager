@@ -44,27 +44,6 @@ static const BOOL kFixLatterTabsPositions = NO;
 	return self;
 }
 
-
-- (void)drawRect:(CGRect)rect
-{
-	UIBezierPath *bezierPath;
-
-	// Draw top line
-	bezierPath = [UIBezierPath bezierPath];
-	[bezierPath moveToPoint:CGPointMake(0.0, 0.0)];
-	[bezierPath addLineToPoint:CGPointMake(CGRectGetWidth(rect), 0.0)];
-	[[UIColor colorWithWhite:197.0f / 255.0f alpha:0.75] setStroke];
-	[bezierPath setLineWidth:1.0];
-	[bezierPath stroke];
-
-	// Draw bottom line
-	bezierPath = [UIBezierPath bezierPath];
-	[bezierPath moveToPoint:CGPointMake(0.0, CGRectGetHeight(rect))];
-	[bezierPath addLineToPoint:CGPointMake(CGRectGetWidth(rect), CGRectGetHeight(rect))];
-	[[UIColor colorWithWhite:197.0f / 255.0f alpha:0.75] setStroke];
-	[bezierPath setLineWidth:1.0];
-	[bezierPath stroke];
-}
 @end
 
 #pragma mark - ViewPagerController
@@ -152,7 +131,7 @@ static const BOOL kFixLatterTabsPositions = NO;
 
 	CGFloat topLayoutGuide = 0.0;
 	if (IOS_VERSION_8) {
-		topLayoutGuide = 20.0;
+		topLayoutGuide = UIApplication.sharedApplication.statusBarHidden ? 0.0f : 20.0f;
 		if (self.navigationController && !self.navigationController.navigationBarHidden) {
 			topLayoutGuide += self.navigationController.navigationBar.frame.size.height;
 		}
@@ -418,7 +397,7 @@ static const BOOL kFixLatterTabsPositions = NO;
 		frame.size.width = self.tabWidth;
 		tabView.frame = frame;
 
-		contentSizeWidth += CGRectGetWidth(tabView.frame);
+		contentSizeWidth += CGRectGetWidth(tabView.frame) + self.padding;
 	}
 
 	// Extend contentSizeWidth if fixLatterTabsPositions is provided YES
@@ -477,6 +456,7 @@ static const BOOL kFixLatterTabsPositions = NO;
 	self.tabOffset = kTabOffset;
 	self.tabWidth = kTabWidth;
 	self.tabHeight = kTabHeight;
+	self.padding = 0.0;
 
 	self.didTapOnTabView = NO;
 
@@ -567,7 +547,7 @@ static const BOOL kFixLatterTabsPositions = NO;
 
 		[self.tabsView addSubview:tabView];
 
-		contentSizeWidth += CGRectGetWidth(tabView.frame);
+		contentSizeWidth += CGRectGetWidth(tabView.frame) + self.padding;
 
 		// To capture tap events
 		UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
@@ -763,7 +743,7 @@ static const BOOL kFixLatterTabsPositions = NO;
 		self.underlineStroke.frame = rect;
 	};
 	CGFloat width = CGRectGetWidth(self.view.frame);
-	CGFloat distance = tabView.frame.size.width;
+	CGFloat distance = tabView.frame.size.width + self.padding;
 
 	if (self.shouldAnimateIndicator == ViewPagerIndicatorAnimationWhileScrolling && !self.didTapOnTabView) {
 		if ([scrollView.panGestureRecognizer translationInView:scrollView.superview].x > 0) {

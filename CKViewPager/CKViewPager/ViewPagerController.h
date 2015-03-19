@@ -52,6 +52,10 @@ typedef NS_ENUM(NSUInteger, ViewPagerIndicator)
 */
 @property(nonatomic) CGFloat indicatorHeight;
 /**
+* Padding in between each tab, default to 0
+*/
+@property(nonatomic) CGFloat padding;
+/**
 * ViewPagerTabLocationTop, ViewPagerTabLocationBottom, Defaults to ViewPagerTabLocationTop
 */
 @property(nonatomic) ViewPagerTabLocation tabLocation;
