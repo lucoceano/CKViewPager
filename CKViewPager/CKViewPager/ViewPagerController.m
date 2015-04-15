@@ -397,7 +397,9 @@ static const BOOL kFixLatterTabsPositions = NO;
 		frame.size.width = self.tabWidth;
 		tabView.frame = frame;
 
-		contentSizeWidth += CGRectGetWidth(tabView.frame) + self.padding;
+		if(i < self.tabCount -1){
+			contentSizeWidth += CGRectGetWidth(tabView.frame) + self.padding;
+		}
 	}
 
 	// Extend contentSizeWidth if fixLatterTabsPositions is provided YES
@@ -547,7 +549,9 @@ static const BOOL kFixLatterTabsPositions = NO;
 
 		[self.tabsView addSubview:tabView];
 
-		contentSizeWidth += CGRectGetWidth(tabView.frame) + self.padding;
+		if(i < self.tabCount -1) {
+			contentSizeWidth += CGRectGetWidth(tabView.frame) + self.padding;
+		}
 
 		// To capture tap events
 		UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
