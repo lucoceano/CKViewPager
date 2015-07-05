@@ -8,16 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, ViewPagerTabLocation)
-{
-	ViewPagerTabLocationTop = 0,
-	ViewPagerTabLocationBottom = 1
+typedef NS_ENUM(NSUInteger, ViewPagerTabLocation) {
+  ViewPagerTabLocationTop = 0,
+  ViewPagerTabLocationBottom = 1
 };
-typedef NS_ENUM(NSUInteger, ViewPagerIndicator)
-{
-	ViewPagerIndicatorAnimationNone = 0,
-	ViewPagerIndicatorAnimationEnd = 1,
-	ViewPagerIndicatorAnimationWhileScrolling = 2
+typedef NS_ENUM(NSUInteger, ViewPagerIndicator) {
+  ViewPagerIndicatorAnimationNone = 0,
+  ViewPagerIndicatorAnimationEnd = 1,
+  ViewPagerIndicatorAnimationWhileScrolling = 2
 
 };
 @protocol ViewPagerDataSource;
@@ -97,7 +95,18 @@ typedef NS_ENUM(NSUInteger, ViewPagerIndicator)
 * Provided views goes here as content
 */
 @property(nonatomic) UIColor *contentViewBackgroundColor;
-
+/**
+* Divider color
+*/
+@property(nonatomic, strong) UIColor *dividerColor;
+/**
+* Show divider between tabs and content view, default to NO
+*/
+@property(nonatomic) BOOL shouldShowDivider;
+/**
+* The height for the divider line, default to 0.5;
+*/
+@property(nonatomic) CGFloat dividerHeight;
 #pragma mark Methods
 /**
 * Reloads all tabs and contents with default configuration
@@ -180,26 +189,16 @@ typedef NS_ENUM(NSUInteger, ViewPagerIndicator)
 @optional
 /**
 * delegate object must implement this method if wants to be informed when a tab changes
-*
-* @param viewPager The viewPager that's subject to
-* @param index The index of the active tab
 */
 - (void)viewPager:(ViewPagerController *)viewPager didChangeTabToIndex:(NSUInteger)index;
+
 /**
 * delegate object should implement this method if it wants to be informed when a tab changes and what its previous tab index was
-*
-* @param viewPager The viewPager that's subject to
-* @param index The index of the active tab
-* @param previousIndex The previous index of the active tab
 */
 - (void)viewPager:(ViewPagerController *)viewPager didChangeTabToIndex:(NSUInteger)index fromIndex:(NSUInteger)previousIndex;
+
 /**
 * delegate object should implement this method if it wants to be informed when a tab changes and what its previous tab index was and whether the change action was caused by a swipe gesture or tab bar button press
-*
-* @param viewPager The viewPager that's subject to
-* @param index The index of the active tab
-* @param previousIndex The previous index of the active tab
-* @param didSwipe Indicating if the change action was caused by a swipe gesture or a tab bar button press
 */
 - (void)viewPager:(ViewPagerController *)viewPager didChangeTabToIndex:(NSUInteger)index fromIndex:(NSUInteger)previousIndex didSwipe:(BOOL)didSwipe;
 
