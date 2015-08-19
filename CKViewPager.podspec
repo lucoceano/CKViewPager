@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CKViewPager"
-  s.version      = "2.0.3"
+  s.version      = "2.0.4"
   s.summary      = "You can create sliding tabs with ViewPager."
 
   s.description  = <<-DESC
