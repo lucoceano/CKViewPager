@@ -20,6 +20,7 @@
 		7CF3D68117CE33EC0021036A /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3D68017CE33EC0021036A /* HostViewController.m */; };
 		7CF3D68217CE35500021036A /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF3D67117CE332F0021036A /* iPhone.storyboard */; };
 		7CF3D68517CE3F5B0021036A /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3D68417CE3F5B0021036A /* ContentViewController.m */; };
+		C825F33D1BD6597C008C1E47 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C825F33C1BD6597C008C1E47 /* Launch.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		7CF3D68017CE33EC0021036A /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
 		7CF3D68317CE3F5B0021036A /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		7CF3D68417CE3F5B0021036A /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		C825F33C1BD6597C008C1E47 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				7CF3D67A17CE33C80021036A /* Controller */,
 				7C115E001816DED1000BCE63 /* Images.xcassets */,
 				7CF3D65B17CE32E40021036A /* Supporting Files */,
+				C825F33C1BD6597C008C1E47 /* Launch.storyboard */,
 			);
 			path = CKViewPager;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				7CF3D68217CE35500021036A /* iPhone.storyboard in Resources */,
 				7CEC17A917DA1EC000E4A439 /* iPad.storyboard in Resources */,
 				7CF3D67617CE336E0021036A /* Localization.strings in Resources */,
+				C825F33D1BD6597C008C1E47 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +300,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CKViewPager/CKViewPager-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CKViewPager/CKViewPager-Info.plist";
@@ -310,7 +313,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CKViewPager/CKViewPager-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CKViewPager/CKViewPager-Info.plist";
