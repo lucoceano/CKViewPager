@@ -131,17 +131,7 @@ static const BOOL kFixLatterTabsPositions = NO;
 
 - (void)layoutSubviews
 {
-    CGFloat topLayoutGuide = 0.0;
-    if (IOS_VERSION_8) {
-      if (self.navigationController && self.navigationController.navigationBar) {
-        if(self.navigationController.navigationBar.hidden || self.navigationController.navigationBar.translucent){
-          topLayoutGuide = 20.0f;
-        }
-        if(self.navigationController.navigationBar.translucent && !self.navigationController.navigationBar.hidden){
-          topLayoutGuide += self.navigationController.navigationBar.frame.size.height;
-        }
-      }
-    }
+    CGFloat topLayoutGuide = self.topLayoutGuide.length;
     
     CGRect frame = self.tabsView.frame;
     frame.origin.x = 0.0;
