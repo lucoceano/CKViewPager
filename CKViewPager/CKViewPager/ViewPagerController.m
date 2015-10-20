@@ -804,8 +804,6 @@ static const BOOL kFixLatterTabsPositions = NO;
 {
     CGFloat newX = NSNotFound;
     CGFloat aFloat = [scrollView.panGestureRecognizer translationInView:scrollView.superview].x;
-    NSLog(@"aFloat = %f", aFloat);
-    NSLog(@"scrollView.contentOffset.x = %f", scrollView.contentOffset.x);
     if (scrollView.contentOffset.x != 0) {
         if (aFloat > 0) {
             // handle dragging to the right
