@@ -1,6 +1,8 @@
 CKViewPager
 ============
 
+## Important - Code unmaintained, sorry guys, but I don't have time to maintain this code anymore :(
+
 Easily create beautiful sliding tabs. 
 
 CKViewPager is also available in [Swift](https://github.com/lucoceano/Pager)
